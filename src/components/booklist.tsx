@@ -15,7 +15,7 @@ interface Props {
 }
 
 
-const Booklist:React.FC<Props> = ({booksProps} ) => {
+const Booklist = ({booksProps}: Props) => {
   return (
     <section>
       {booksProps.map((book:any) => {

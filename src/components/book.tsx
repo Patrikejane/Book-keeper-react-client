@@ -6,7 +6,7 @@ interface BookProps {
   image: string;
 }
 
-const Book: React.FC<BookProps> = ({ name, price, image }) => {
+const Book = ({ name, price, image }:BookProps) => {
   return (
     <div>
       <article className="book">

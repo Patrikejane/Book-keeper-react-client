@@ -2,10 +2,23 @@ import React, { useState } from 'react';
 import Book from './book';
 
 
-const Booklist:React.FC<any> = ({books} ) => {
+
+interface BookProps {
+  name: string;
+  price: number;
+  image: string;
+}
+
+
+interface Props {
+ booksProps : BookProps[]
+}
+
+
+const Booklist:React.FC<Props> = ({booksProps} ) => {
   return (
     <section>
-      {books.map((book:any) => {
+      {booksProps.map((book:any) => {
         return <Book key={book.id}{...book} />;
       })}
     </section>
